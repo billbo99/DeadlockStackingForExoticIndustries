@@ -1,0 +1,17 @@
+{
+    "name": "DeadlockStackingForExoticIndustries",
+    "version": "1.1.0",
+    "factorio_version": "1.1",
+    "title": "Deadlock Stacking For Exotic Industries (Alpha)",
+    "author": "billbo99",
+    "homepage": "",
+    "dependencies": [
+        "base",
+        "deadlock-beltboxes-loaders",
+        "exotic-industries",
+        "rusty-locale",
+        "? DeadlockStackingForVanilla",
+        "? PressurizedFluidsExoticIndustries"
+    ],
+    "description": "Stacked items for Exotic Industries (Alpha)"
+}
