@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.1
+Version: 1.1.1
+Date: 2023-03-19
+  Changes:
+    - issues around weird things happening with stacking of poor iron/copper and iron-gear-wheel / iron-sticks
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
 Date: 2023-xx-xx
   Changes:
     - First cut

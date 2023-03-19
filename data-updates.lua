@@ -35,7 +35,7 @@ end
 
 local function process_result(items, result)
     if result then
-        table.insert(items, {name = result, type = "item"})
+        table.insert(items, { name = result, type = "item" })
     end
 end
 
@@ -43,7 +43,7 @@ local function process_results(items, results)
     if results then
         for _, item in pairs(results) do
             if item.name or item[1] then
-                table.insert(items, {name = item.name or item[1], type = item.type or "item"})
+                table.insert(items, { name = item.name or item[1], type = item.type or "item" })
             end
         end
     end
@@ -77,7 +77,7 @@ local function walk_technology()
                     local items = get_items_made_by_recipe(recipe)
                     for _, item in pairs(items) do
                         if not tech_by_product[item.name] then
-                            tech_by_product[item.name] = {type = item.type, tech = {}}
+                            tech_by_product[item.name] = { type = item.type, tech = {} }
                         end
                         if tech.name == default_beltbox or starts_with(tech.name, "deadlock-stacking-") then
                             -- skipping beltbox technology
@@ -99,14 +99,14 @@ local function walk_resources()
         if resource.minable then
             if resource.minable.result then
                 if not tech_by_product[resource.minable.result] then
-                    tech_by_product[resource.minable.result] = {type = resource.minable.result.type or "item", tech = {}}
+                    tech_by_product[resource.minable.result] = { type = resource.minable.result.type or "item", tech = {} }
                 end
                 table.insert(tech_by_product[resource.minable.result].tech, default_beltbox)
             elseif resource.minable.results then
                 for _, result in pairs(resource.minable.results) do
                     if result.type == "item" then
                         if not tech_by_product[result.name] then
-                            tech_by_product[result.name] = {type = result.type, tech = {}}
+                            tech_by_product[result.name] = { type = result.type, tech = {} }
                             table.insert(tech_by_product[result.name].tech, default_beltbox)
                         end
                     end
@@ -127,7 +127,7 @@ local function walk_recipes()
             local main_product = rusty_recipes.get_main_product(recipe)
             if main_product then
                 if not tech_by_product[main_product.name] then
-                    tech_by_product[main_product.name] = {type = main_product.type, tech = {}}
+                    tech_by_product[main_product.name] = { type = main_product.type, tech = {} }
                     table.insert(tech_by_product[main_product.name].tech, default_beltbox)
                 end
             else
@@ -151,10 +151,10 @@ local function add_item_to_tech(name, tech)
         end
     end
     if not recipes[string.format("deadlock-stacks-stack-%s", name)] then
-        table.insert(data.raw.technology[tech].effects, {type = "unlock-recipe", recipe = string.format("deadlock-stacks-stack-%s", name)})
+        table.insert(data.raw.technology[tech].effects, { type = "unlock-recipe", recipe = string.format("deadlock-stacks-stack-%s", name) })
     end
     if not recipes[string.format("deadlock-stacks-unstack-%s", name)] then
-        table.insert(data.raw.technology[tech].effects, {type = "unlock-recipe", recipe = string.format("deadlock-stacks-unstack-%s", name)})
+        table.insert(data.raw.technology[tech].effects, { type = "unlock-recipe", recipe = string.format("deadlock-stacks-unstack-%s", name) })
     end
 end
 
@@ -180,7 +180,7 @@ local function main()
                 table.insert(techs, tech)
             end
         else
-            techs = {item.tech}
+            techs = { item.tech }
         end
 
         if item.type then
@@ -253,28 +253,28 @@ for recipe, recipe_table in pairs(data.raw.recipe) do
             if starts_with(recipe, "deadlock-stacks-stack-") then
                 local x = rusty_prototypes.find_by_name(string.sub(recipe_table.result, 16))
                 parent = x.item or x.module or x.tool or nil
-                last_icon = {icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-u-64.png", icon_size = 64, scale = 0.25}
+                last_icon = { icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-u-64.png", icon_size = 64, scale = 0.25 }
             else
                 local x = rusty_prototypes.find_by_name(recipe_table.result)
                 parent = x.item or x.module or x.tool or nil
-                last_icon = {icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-d-64.png", icon_size = 64, scale = 0.25}
+                last_icon = { icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-d-64.png", icon_size = 64, scale = 0.25 }
             end
             if parent and parent.icon then
                 if string.find(parent.icon, "__bob") then
                     if not string.find(recipe_table.icons[1].icon, "blank.png") then
-                        local icons = {{icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/blank.png", icon_size = 32, scale = 1}}
-                        table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, 3}})
-                        table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, 0}})
-                        table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, -3}})
+                        local icons = { { icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/blank.png", icon_size = 32, scale = 1 } }
+                        table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, 3 } })
+                        table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, 0 } })
+                        table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, -3 } })
                         table.insert(icons, last_icon)
                         recipe_table.icons = icons
 
                         if starts_with(recipe, "deadlock-stacks-stack-") then
                             local stacked_icon = data.raw.item[recipe_table.result]
-                            icons = {{icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/blank.png", icon_size = 32, scale = 1}}
-                            table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, 3}})
-                            table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, 0}})
-                            table.insert(icons, {icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = {0, -3}})
+                            icons = { { icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/blank.png", icon_size = 32, scale = 1 } }
+                            table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, 3 } })
+                            table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, 0 } })
+                            table.insert(icons, { icon = parent.icon, icon_size = parent.icon_size, scale = 0.85 / (parent.icon_size / 32), shift = { 0, -3 } })
 
                             stacked_icon.icons = icons
                         end
