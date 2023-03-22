@@ -66,7 +66,10 @@ Items.items = {
     ["ei_module-base"] = { icon = mod .. "stacked-module-base.png", icon_size = 64 },
     ["ei_high-energy-crystal"] = { icon = mod .. "stacked-high-energy-crystal.png", icon_size = 64 },
     ["ei_advanced-motor"] = { icon = mod .. "stacked-advanced-motor.png", icon_size = 64 },
+    ["ei_rocket-parts"] = { icon = mod .. "stacked-rocket-parts.png", icon_size = 64 },
     ["ei_advanced-semiconductor"] = { icon = mod .. "stacked-advanced-waver.png", icon_size = 64 },
+    ["ei_advanced-base-semiconductor"] = { icon = mod .. "stacked-advanced-base-waver.png", icon_size = 64 },
+    ["ei_computing-unit"] = { icon = mod .. "stacked-computing-unit.png", icon_size = 64 },
     ["ei_uranium-233-fuel"] = { icon = mod .. "stacked-uranium-233-fuel.png", icon_size = 64 },
     ["ei_used-uranium-233-fuel"] = { icon = mod .. "stacked-used-uranium-233-fuel.png", icon_size = 64 },
     ["ei_plutonium-239-fuel"] = { icon = mod .. "stacked-plutonium-239-fuel.png", icon_size = 64 },
@@ -77,6 +80,22 @@ Items.items = {
     ["ei_thorium-232"] = { icon = mod .. "stacked-thorium-232.png", icon_size = 64 },
     ["ei_fission-data"] = { icon = mod .. "stacked-fission-data.png", icon_size = 64 },
     ["ei_simulation-data"] = { icon = mod .. "stacked-simulation-data.png", icon_size = 64 },
+    -- Quantum Age
+    ["ei_plasma-data"] = { icon = mod .. "stacked-plasma-data.png", icon_size = 64 },
+    ["ei_photon-cavity"] = { icon = mod .. "stacked-photon-cavity.png", icon_size = 64 },
+    ["ei_gluon-cavity"] = { icon = mod .. "stacked-gluon-cavity.png", icon_size = 64 },
+    ["ei_z-boson-cavity"] = { icon = mod .. "stacked-z-boson-cavity.png", icon_size = 64 },
+    ["ei_crushed-neodym"] = { icon = mod .. "stacked-crushed-neodym.png", icon_size = 64 },
+    ["ei_pure-crushed-neodym"] = { icon = mod .. "stacked-crushed-pure-neodym.png", icon_size = 64 },
+    ["ei_crushed-coal"] = { icon = mod .. "stacked-crushed-coal.png", icon_size = 64 },
+    ["ei_carbon"] = { icon = mod .. "stacked-carbon.png", icon_size = 64 },
+    ["ei_carbon-nanotube"] = { icon = mod .. "stacked-carbon-nanotube.png", icon_size = 64 },
+    ["ei_carbon-structure"] = { icon = mod .. "stacked-carbon-structure.png", icon_size = 64 },
+    ["ei_magnet"] = { icon = mod .. "stacked-magnet.png", icon_size = 64 },
+    ["ei_magnet-data"] = { icon = mod .. "stacked-magnet-data.png", icon_size = 64 },
+    ["ei_fusion-data"] = { icon = mod .. "stacked-fusion-data.png", icon_size = 64 },
+    ["ei_sun-data"] = { icon = mod .. "stacked-sun-data.png", icon_size = 64 },
+    ["ei_gas-giant-data"] = { icon = mod .. "stacked-gas-giant-data.png", icon_size = 64 },
 }
 
 return Items
