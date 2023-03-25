@@ -96,6 +96,19 @@ Items.items = {
     ["ei_fusion-data"] = { icon = mod .. "stacked-fusion-data.png", icon_size = 64 },
     ["ei_sun-data"] = { icon = mod .. "stacked-sun-data.png", icon_size = 64 },
     ["ei_gas-giant-data"] = { icon = mod .. "stacked-gas-giant-data.png", icon_size = 64 },
+    ["ei_odd-plating"] = { icon = mod .. "stacked-odd-plating.png", icon_size = 64 },
+    ["ei_plasma-cube"] = { icon = mod .. "stacked-plasma-cube.png", icon_size = 64 },
+    ["ei_eu-circuit"] = { icon = mod .. "stacked-eu-circuit.png", icon_size = 64 },
+    ["ei_eu-magnet"] = { icon = mod .. "stacked-eu-magnet.png", icon_size = 64 },
+    ["ei_exotic-matter-up"] = { icon = mod .. "stacked-exotic-matter-up.png", icon_size = 64 },
+    ["ei_exotic-matter-down"] = { icon = mod .. "stacked-exotic-matter-down.png", icon_size = 64 },
+    ["ei_high-tech-parts"] = { icon = mod .. "stacked-exotic-matter-down.png", icon_size = 64 },
+    ["ei_advanced-rocket-fuel"] = { icon = mod .. "stacked-advanced-rocket-fuel.png", icon_size = 64 },
+    ["ei_lithium-crystal"] = { icon = mod .. "stacked-lithium-crystal.png", icon_size = 64 },
+    ["ei_superior-data"] = { icon = mod .. "stacked-superior-data.png", icon_size = 64 },
+    -- Exotic Age
+    ["ei_black-hole-data"] = { icon = mod .. "stacked-black-hole-data.png", icon_size = 64 },
+    --
 }
 
 return Items

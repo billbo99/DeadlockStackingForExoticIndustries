@@ -158,6 +158,34 @@ local function add_item_to_tech(name, tech)
     end
 end
 
+local function add_loader_beltbox()
+    deadlock.add_tier(
+        {
+            transport_belt = "ei_neo-belt",
+            colour = { r = 225, g = 25, b = 225 }, -- purple
+            -- colour = {r = 10, g = 225, b = 25},  -- green
+            underground_belt = "ei_neo-underground-belt",
+            splitter = "ei_neo-splitter",
+            technology = "ei_neo-logistics",
+            order = "d",
+            loader_ingredients = {
+                { type = "fluid", name = "ei_liquid-nitrogen",            amount = 40 },
+                { type = "item",  name = "express-transport-belt-loader", amount = 2 },
+                { type = "item",  name = "ei_neodym-plate",               amount = 10 },
+                { type = "item",  name = "ei_steel-mechanical-parts",     amount = 10 },
+            },
+            loader_category = "crafting-with-fluid",
+            beltbox_ingredients = {
+                { type = "fluid", name = "ei_liquid-nitrogen",             amount = 40 },
+                { type = "item",  name = "express-transport-belt-beltbox", amount = 2 },
+                { type = "item",  name = "ei_neodym-plate",                amount = 10 },
+                { type = "item",  name = "ei_steel-mechanical-parts",      amount = 10 },
+            },
+            beltbox_technology = "deadlock-stacking-4"
+        }
+    )
+end
+
 local function main()
     --Add stacking recipes
     for name, item in pairs(Items) do
@@ -207,6 +235,7 @@ end
 walk_technology()
 walk_resources()
 walk_recipes()
+add_loader_beltbox()
 main()
 
 -- multiply a number with a unit (kJ, kW etc) at the end
