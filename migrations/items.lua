@@ -3,6 +3,10 @@ local mod = "__DeadlockStackingForExoticIndustries__/graphics/icons/"
 local Items = {}
 
 Items.items = {
+    -- Alien Strctures
+    ["ei_alien-resin"] = { icon = mod .. "stacked-alien-resin.png", icon_size = 64 },
+    ["ei_alien-seed"] = { icon = mod .. "stacked-alien-seed.png", icon_size = 64 },
+    ["ei_blooming_alien-seed"] = { icon = mod .. "stacked-blooming-alien-seed.png", icon_size = 64 },
     -- Dark Age
     ["ei_poor-iron-chunk"] = { icon = mod .. "stacked-poor-iron-chunk.png", icon_size = 64 },
     ["ei_poor-copper-chunk"] = { icon = mod .. "stacked-poor-copper-chunk.png", icon_size = 64 },
@@ -35,6 +39,7 @@ Items.items = {
     ["ei_cpu"] = { icon = mod .. "stacked-cpu.png", icon_size = 64 },
     ["ei_electronic-parts"] = { icon = mod .. "stacked-electronic-parts.png", icon_size = 64 },
     ["ei_crushed-gold"] = { icon = mod .. "stacked-crushed-gold.png", icon_size = 64 },
+    ["ei_crushed-sulfur"] = { icon = mod .. "stacked-crushed-sulfur.png", icon_size = 64 },
     ["ei_gold-ingot"] = { icon = mod .. "stacked-gold-ingot.png", icon_size = 64 },
     ["ei_gold-plate"] = { icon = mod .. "stacked-gold-plate.png", icon_size = 64 },
     ["ei_neodym-ingot"] = { icon = mod .. "stacked-neodym-ingot.png", icon_size = 64 },
@@ -42,21 +47,26 @@ Items.items = {
     ["ei_lead-ingot"] = { icon = mod .. "stacked-lead-ingot.png", icon_size = 64 },
     ["ei_lead-plate"] = { icon = mod .. "stacked-lead-plate.png", icon_size = 64 },
     ["ei_gold-chunk"] = { icon = mod .. "stacked-gold-chunk.png", icon_size = 64 },
+    ["ei_sulfur-chunk"] = { icon = mod .. "stacked-sulfur-chunk.png", icon_size = 64 },
     ["ei_lead-chunk"] = { icon = mod .. "stacked-lead-chunk.png", icon_size = 64 },
     ["ei_neodym-chunk"] = { icon = mod .. "stacked-neodym-chunk.png", icon_size = 64 },
     ["ei_coal-chunk"] = { icon = mod .. "stacked-coal-chunk.png", icon_size = 64 },
     ["ei_iron-chunk"] = { icon = mod .. "stacked-iron-chunk.png", icon_size = 64 },
     ["ei_copper-chunk"] = { icon = mod .. "stacked-copper-chunk.png", icon_size = 64 },
     ["ei_uranium-chunk"] = { icon = mod .. "stacked-uranium-chunk.png", icon_size = 64 },
+    -- Electricity Age/waver-factory
     ["ei_faulty-semiconductor"] = { icon = mod .. "stacked-faulty-waver.png", icon_size = 64 },
     ["ei_semiconductor"] = { icon = mod .. "stacked-waver.png", icon_size = 64 },
+    -- Electricity Age/fission-facility
     ["ei_crushed-uranium"] = { icon = mod .. "stacked-crushed-uranium.png", icon_size = 64 },
     ["ei_crushed-pure-uranium"] = { icon = mod .. "stacked-crushed-pure-uranium.png", icon_size = 64 },
     ["ei_nuclear-waste"] = { icon = mod .. "stacked-nuclear-waste.png", icon_size = 64 },
     ["ei_uranium-test-fuel"] = { icon = mod .. "stacked-test-fuel.png", icon_size = 64 },
     ["ei_uranium-235-fuel"] = { icon = mod .. "stacked-uranium-235-fuel.png", icon_size = 64 },
     ["ei_used-uranium-235-fuel"] = { icon = mod .. "stacked-used-uranium-235-fuel.png", icon_size = 64 },
+    -- Electricity Age/grower
     ["ei_energy-crystal"] = { icon = mod .. "stacked-energy-crystal.png", icon_size = 64 },
+    -- Electricity Age/purifier
     ["ei_pure-iron"] = { icon = mod .. "stacked-iron-ore.png", icon_size = 64 },
     ["ei_pure-copper"] = { icon = mod .. "stacked-copper-ore.png", icon_size = 64 },
     ["ei_pure-lead"] = { icon = mod .. "stacked-pure-lead.png", icon_size = 64 },
@@ -70,21 +80,47 @@ Items.items = {
     ["ei_advanced-semiconductor"] = { icon = mod .. "stacked-advanced-waver.png", icon_size = 64 },
     ["ei_advanced-base-semiconductor"] = { icon = mod .. "stacked-advanced-base-waver.png", icon_size = 64 },
     ["ei_computing-unit"] = { icon = mod .. "stacked-computing-unit.png", icon_size = 64 },
+    -- Computer Age/New
+    ["ei_cryodust"] = { icon = mod .. "stacked-cryodust.png", icon_size = 64 },
+    ["ei_condensed-cryodust"] = { icon = mod .. "stacked-condensed-cryodust.png", icon_size = 64 },
+    ["ei_enriched-cryodust"] = { icon = mod .. "stacked-enriched-cryodust.png", icon_size = 64 },
+    ["ei_cryocondensate"] = { icon = mod .. "stacked-cryocondensate.png", icon_size = 64 },
+    ["ei_sus-plating"] = { icon = mod .. "stacked-sus-plating.png", icon_size = 64 },
+    ["ei_bio-matter"] = { icon = mod .. "stacked-bio-matter.png", icon_size = 64 },
+    ["ei_evolved-alien-seed"] = { icon = mod .. "stacked-evolved-alien-seed.png", icon_size = 64 },
+    ["ei_blooming-evolved-alien-seed"] = { icon = mod .. "stacked-blooming-evolved-alien-seed.png", icon_size = 64 },
+    ["ei_silicon"] = { icon = mod .. "stacked-silicon.png", icon_size = 64 },
+    ["ei_monosilicon"] = { icon = mod .. "stacked-monosilicon.png", icon_size = 64 },
+    -- Computer Age/high-temperature-reactor
     ["ei_uranium-233-fuel"] = { icon = mod .. "stacked-uranium-233-fuel.png", icon_size = 64 },
     ["ei_used-uranium-233-fuel"] = { icon = mod .. "stacked-used-uranium-233-fuel.png", icon_size = 64 },
     ["ei_plutonium-239-fuel"] = { icon = mod .. "stacked-plutonium-239-fuel.png", icon_size = 64 },
     ["ei_used-plutonium-239-fuel"] = { icon = mod .. "stacked-used-plutonium-239-fuel.png", icon_size = 64 },
+    ["ei_thorium-232-fuel"] = { icon = mod .. "stacked-thorium-232-fuel.png", icon_size = 64 },
     ["ei_used-thorium-232-fuel"] = { icon = mod .. "stacked-used-thorium-232-fuel.png", icon_size = 64 },
     ["ei_plutonium-239"] = { icon = mod .. "stacked-plutonium-239.png", icon_size = 64 },
     ["ei_uranium-233"] = { icon = mod .. "stacked-uranium-233.png", icon_size = 64 },
     ["ei_thorium-232"] = { icon = mod .. "stacked-thorium-232.png", icon_size = 64 },
-    ["ei_fission-data"] = { icon = mod .. "stacked-fission-data.png", icon_size = 64 },
+    -- Computer Age/small-simulator
+    -- ["ei_fission-data"] = { icon = mod .. "stacked-fission-data.png", icon_size = 64 },
     ["ei_simulation-data"] = { icon = mod .. "stacked-simulation-data.png", icon_size = 64 },
     -- Quantum Age
-    ["ei_plasma-data"] = { icon = mod .. "stacked-plasma-data.png", icon_size = 64 },
+    ["ei_speed-module-4"] = { icon = mod .. "stacked-speed-module-4.png", icon_size = 64 },
+    ["ei_speed-module-5"] = { icon = mod .. "stacked-speed-module-5.png", icon_size = 64 },
+    ["ei_speed-module-6"] = { icon = mod .. "stacked-speed-module-6.png", icon_size = 64 },
+    ["ei_effectivity-module-4"] = { icon = mod .. "stacked-effectivity-module-4.png", icon_size = 64 },
+    ["ei_effectivity-module-5"] = { icon = mod .. "stacked-effectivity-module-5.png", icon_size = 64 },
+    ["ei_effectivity-module-6"] = { icon = mod .. "stacked-effectivity-module-6.png", icon_size = 64 },
+    ["ei_productivity-module-4"] = { icon = mod .. "stacked-productivity-module-4.png", icon_size = 64 },
+    ["ei_productivity-module-5"] = { icon = mod .. "stacked-productivity-module-5.png", icon_size = 64 },
+    ["ei_productivity-module-6"] = { icon = mod .. "stacked-productivity-module-6.png", icon_size = 64 },
+    ["ei_gauss-module"] = { icon = mod .. "stacked-gauss-module.png", icon_size = 64 },
     ["ei_photon-cavity"] = { icon = mod .. "stacked-photon-cavity.png", icon_size = 64 },
     ["ei_gluon-cavity"] = { icon = mod .. "stacked-gluon-cavity.png", icon_size = 64 },
     ["ei_z-boson-cavity"] = { icon = mod .. "stacked-z-boson-cavity.png", icon_size = 64 },
+    ["ei_clean-plating"] = { icon = mod .. "stacked-clean-plating.png", icon_size = 64 },
+    ["ei_circuit-board"] = { icon = mod .. "stacked-circuit-board.png", icon_size = 64 },
+    ["ei_cavity"] = { icon = mod .. "stacked-cavity.png", icon_size = 64 },
     ["ei_crushed-neodym"] = { icon = mod .. "stacked-crushed-neodym.png", icon_size = 64 },
     ["ei_pure-crushed-neodym"] = { icon = mod .. "stacked-crushed-pure-neodym.png", icon_size = 64 },
     ["ei_crushed-coal"] = { icon = mod .. "stacked-crushed-coal.png", icon_size = 64 },
@@ -97,6 +133,7 @@ Items.items = {
     ["ei_sun-data"] = { icon = mod .. "stacked-sun-data.png", icon_size = 64 },
     ["ei_gas-giant-data"] = { icon = mod .. "stacked-gas-giant-data.png", icon_size = 64 },
     ["ei_odd-plating"] = { icon = mod .. "stacked-odd-plating.png", icon_size = 64 },
+    ["ei_exotic-ore"] = { icon = mod .. "stacked-exotic-ore.png", icon_size = 64 },
     ["ei_plasma-cube"] = { icon = mod .. "stacked-plasma-cube.png", icon_size = 64 },
     ["ei_eu-circuit"] = { icon = mod .. "stacked-eu-circuit.png", icon_size = 64 },
     ["ei_eu-magnet"] = { icon = mod .. "stacked-eu-magnet.png", icon_size = 64 },
@@ -105,7 +142,10 @@ Items.items = {
     ["ei_high-tech-parts"] = { icon = mod .. "stacked-exotic-matter-down.png", icon_size = 64 },
     ["ei_advanced-rocket-fuel"] = { icon = mod .. "stacked-advanced-rocket-fuel.png", icon_size = 64 },
     ["ei_lithium-crystal"] = { icon = mod .. "stacked-lithium-crystal.png", icon_size = 64 },
+    -- Quantum Age/quantum-computer
     ["ei_superior-data"] = { icon = mod .. "stacked-superior-data.png", icon_size = 64 },
+    -- Quantum Age/plasma-heater
+    ["ei_plasma-data"] = { icon = mod .. "stacked-plasma-data.png", icon_size = 64 },
     -- Exotic Age
     ["ei_black-hole-data"] = { icon = mod .. "stacked-black-hole-data.png", icon_size = 64 },
     --
